@@ -42,8 +42,8 @@ public class AuthController {
 
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getEmail());
         String token = this.helper.generateToken(userDetails);
-
         JwtResponse response = JwtResponse.builder()
+                .result(true)
                 .jwtToken(token)
                 .username(userDetails.getUsername()).build();
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -61,8 +61,8 @@ public class AuthController {
 
     }
     @ExceptionHandler(BadCredentialsException.class)
-    public ResponseEntity<String> exceptionHandler() {
-        return new ResponseEntity<>("Invalid Credentials!!",HttpStatus.UNAUTHORIZED);
+    public String exceptionHandler() {
+        return "Invalid Credentials!!";
     }
 
     @PostMapping("/register")
