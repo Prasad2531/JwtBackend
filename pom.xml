@@ -65,6 +65,17 @@
 			<version>0.11.5</version>
 			<scope>runtime</scope>
 		</dependency>
+<!--		Parsing wsdl dependencies-->
+		<dependency>
+			<groupId>org.ow2.easywsdl</groupId>
+			<artifactId>easywsdl-wsdl</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>3.4.0</version> <!-- Use the latest version available -->
+		</dependency>
 
 	</dependencies>
 
