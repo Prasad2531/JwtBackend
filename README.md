@@ -11,14 +11,12 @@ Technology used: Spring Boot, Spring Security
 
 
 
-Clone the repo
+Clone the repo locally
 
-git clone the repo locally
-
-download the required dependencies from pom.xml
+Download the required dependencies from pom.xml
 
 Make sure the port number is not in use already if so change it
 
-build and run the application 
+Build and run the application 
 
 You can verify the apis using Postman
